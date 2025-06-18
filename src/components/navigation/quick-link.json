@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_navigation_quick_links",
+  "info": {
+    "displayName": "Quick Link",
+    "description": "Represents a quick link in the footer, sourced from frontend-master/src/components/Footer.tsx"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "navigation": {
+      "type": "component",
+      "component": "navigation.nav-item",
+      "repeatable": true
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

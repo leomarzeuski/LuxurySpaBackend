@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_content_private_environment_buttons",
+  "info": {
+    "displayName": "PrivateEnvironmentButton"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

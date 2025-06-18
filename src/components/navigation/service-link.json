@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_navigation_service_links",
+  "info": {
+    "displayName": "Service Link",
+    "description": "Represents a service link in the footer, sourced from frontend-master/src/components/Footer.tsx"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

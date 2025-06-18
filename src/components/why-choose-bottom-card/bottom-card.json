@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_why_choose_bottom_card_bottom_card_s",
+  "info": {
+    "displayName": "bottomCard "
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_massage_common_massage_packages",
+  "info": {
+    "displayName": "MassagePackage"
+  },
+  "options": {},
+  "attributes": {
+    "duration": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

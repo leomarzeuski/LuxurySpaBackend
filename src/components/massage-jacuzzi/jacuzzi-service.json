@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_massage_jacuzzi_jacuzzi_services",
+  "info": {
+    "displayName": "JacuzziService"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "packages": {
+      "type": "component",
+      "component": "massage-common.massage-package",
+      "repeatable": true
+    },
+    "sectionTitle": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

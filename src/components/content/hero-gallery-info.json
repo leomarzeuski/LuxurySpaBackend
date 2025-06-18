@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_content_hero_gallery_infos",
+  "info": {
+    "displayName": "HeroGalleryInfo"
+  },
+  "options": {},
+  "attributes": {
+    "highlight": {
+      "type": "string"
+    },
+    "titleAccent": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

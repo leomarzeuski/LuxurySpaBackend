@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_content_facilities_intros",
+  "info": {
+    "displayName": "FacilitiesIntro"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

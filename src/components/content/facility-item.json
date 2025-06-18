@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_content_facility_items",
+  "info": {
+    "displayName": "FacilityItem"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

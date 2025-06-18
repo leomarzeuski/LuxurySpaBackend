@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_massage_option_massage_options",
+  "info": {
+    "displayName": "MassageOption"
+  },
+  "options": {},
+  "attributes": {
+    "duration": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

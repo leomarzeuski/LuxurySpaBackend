@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_massage_extra_feature_items",
+  "info": {
+    "displayName": "FeatureItem"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "text"
+    },
+    "apiid": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

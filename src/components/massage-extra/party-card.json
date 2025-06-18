@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_massage_extra_party_cards",
+  "info": {
+    "displayName": "PartyCard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "note": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "features": {
+      "type": "component",
+      "component": "massage-extra.feature-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

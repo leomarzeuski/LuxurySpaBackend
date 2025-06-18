@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_contact_info_contacts_s",
+  "info": {
+    "displayName": "contacts "
+  },
+  "options": {},
+  "attributes": {
+    "whatsapp": {
+      "type": "string"
+    },
+    "callNow": {
+      "type": "string"
+    },
+    "telegram": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
