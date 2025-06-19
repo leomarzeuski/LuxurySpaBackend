@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services-contents",
+  "info": {
+    "singularName": "services-content",
+    "pluralName": "services-contents",
+    "displayName": "Services-contents"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
+    },
+    "secureText": {
+      "type": "string"
+    }
+  }
+}

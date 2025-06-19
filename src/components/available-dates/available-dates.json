@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_available_dates_available_dates",
+  "info": {
+    "displayName": "availableDates"
+  },
+  "options": {},
+  "attributes": {
+    "Date": {
+      "type": "date"
+    },
+    "hour": {
+      "type": "time"
+    }
+  },
+  "config": {}
+}

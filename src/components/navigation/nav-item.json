@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_navigation_nav_items",
+  "info": {
+    "displayName": "Nav Item",
+    "description": "Represents a navigation item in the header, sourced from frontend-master/src/components/Header.tsx"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_bottom_button_bottom_buttons",
+  "info": {
+    "displayName": "BottomButton"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_navigation_social_links",
+  "info": {
+    "displayName": "Social Link",
+    "description": "Represents a social media link in the footer, sourced from frontend-master/src/components/Footer.tsx"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

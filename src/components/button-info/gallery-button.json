@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_button_info_gallery_buttons",
+  "info": {
+    "displayName": "galleryButton"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

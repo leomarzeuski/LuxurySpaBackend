@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_badge_info_badge_infos",
+  "info": {
+    "displayName": "BadgeInfo"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

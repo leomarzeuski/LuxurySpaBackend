@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_massage_card_massage_cards",
+  "info": {
+    "displayName": "MassageCard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tag": {
+      "type": "string"
+    },
+    "options": {
+      "type": "component",
+      "component": "massage-option.massage-option",
+      "repeatable": true
+    },
+    "buttonText": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

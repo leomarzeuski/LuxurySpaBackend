@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_content_button_infos",
+  "info": {
+    "displayName": "ButtonInfo"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

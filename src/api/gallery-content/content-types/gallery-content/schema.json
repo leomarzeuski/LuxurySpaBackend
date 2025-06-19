@@ -1,0 +1,79 @@
+{
+  "kind": "singleType",
+  "collectionName": "gallery_contents",
+  "info": {
+    "singularName": "gallery-content",
+    "pluralName": "gallery-contents",
+    "displayName": "Gallery Content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "slides": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "content.slide-text",
+      "repeatable": true
+    },
+    "facilities": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "content.facility-item",
+      "repeatable": true
+    },
+    "galleryButton": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "content.button-info",
+      "repeatable": false
+    },
+    "heroGalleryInfo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "content.hero-gallery-info",
+      "repeatable": true
+    },
+    "privateEnvironmentButton": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "content.private-environment-button",
+      "repeatable": false
+    },
+    "facilitiesIntro": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "content.facilities-intro",
+      "repeatable": false
+    }
+  }
+}

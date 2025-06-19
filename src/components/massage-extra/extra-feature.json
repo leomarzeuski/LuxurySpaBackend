@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_massage_extra_extra_features",
+  "info": {
+    "displayName": "ExtraFeature"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

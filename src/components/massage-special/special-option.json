@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_massage_special_special_options",
+  "info": {
+    "displayName": "SpecialOption"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "text"
+    },
+    "price": {
+      "type": "string"
+    },
+    "note": {
+      "type": "text"
+    },
+    "sectionTitle": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

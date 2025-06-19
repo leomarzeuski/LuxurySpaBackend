@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_content_feature_items",
+  "info": {
+    "displayName": "Feature Item",
+    "description": "Represents a feature in the \"Why Choose Us\" section, sourced from frontend-master/src/components/HowItWorks.tsx"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

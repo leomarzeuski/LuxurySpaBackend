@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_specialties_specialties",
+  "info": {
+    "displayName": "specialties"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
