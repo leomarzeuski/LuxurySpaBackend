@@ -11,7 +11,7 @@ type CompanionCustom = {
 };
 
 // 2) Controller padrão + função customizada
-export default factories.createCoreController('api::companion.companion', ({ strapi }) =>  ({
+export default factories.createCoreController('api::companion.companion', ({ strapi }) => ({
     // GET /companions/:id/availability
     async findAvailability(ctx) {
         const { id } = ctx.params;
@@ -97,5 +97,5 @@ export default factories.createCoreController('api::companion.companion', ({ str
                 message: err.response?.data?.message || err.message,
             };
         }
-      }
+    }
 }));

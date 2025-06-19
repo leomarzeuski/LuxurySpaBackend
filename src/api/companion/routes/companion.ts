@@ -17,7 +17,6 @@ export default {
             config: {
                 auth: false, // ou true, se quiser proteção
             },
-          },
+        },
     ],
 };
-  
