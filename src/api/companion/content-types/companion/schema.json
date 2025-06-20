@@ -104,6 +104,12 @@
     },
     "cal_api_key": {
       "type": "string"
+    },
+    "data_cal_namespace": {
+      "type": "string"
+    },
+    "data-cal-link": {
+      "type": "string"
     }
   }
 }

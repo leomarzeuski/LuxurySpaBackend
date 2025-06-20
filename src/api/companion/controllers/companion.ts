@@ -1,24 +1,37 @@
-// src/api/companion/controllers/companion.ts
 import { factories } from '@strapi/strapi';
 import fetch from 'node-fetch';
 import axios from 'axios';
 
-// 1) Defina o tipo customizado
 type CompanionCustom = {
     event_type_id?: string;
     cal_api_key?: string;
-    // Se tiver mais campos customizados, adicione aqui
+    // Outros campos customizados
+    data_cal_namespace?: string;
+    data_cal_link?: string;
+    name?: string;
+    age?: number;
+    location?: string;
+    rating?: number;
+    reviews?: number;
+    price?: string;
+    tags?: string[];
+    description?: string;
+    image?: any;
 };
 
-// 2) Controller padrão + função customizada
 export default factories.createCoreController('api::companion.companion', ({ strapi }) => ({
     // GET /companions/:id/availability
     async findAvailability(ctx) {
         const { id } = ctx.params;
         const { start, end } = ctx.query;
 
-        // Aqui “mescla” os campos originais com os customizados
-        const companion = await strapi.entityService.findOne('api::companion.companion', id) as CompanionCustom & Record<string, any>;
+        // Busca todos os dados da companion (incluindo todos os campos que o frontend precisa)
+        const companion = await strapi.entityService.findOne('api::companion.companion', id, {
+            // Remove fields property or only include fields that are defined in your Strapi model
+            populate: {
+                image: true, // Se houver relação de imagem (ajuste conforme seu modelo)
+            }
+        }) as CompanionCustom & Record<string, any>;
 
         if (!companion || !companion.event_type_id) {
             return ctx.badRequest('Companion ou event_type_id não encontrado');
@@ -33,30 +46,43 @@ export default factories.createCoreController('api::companion.companion', ({ str
             timeZone: 'America/Sao_Paulo',
         }).toString();
 
-        const res = await fetch(`https://api.cal.com/v2/slots?${params}`, {
-            headers: {
-                'Authorization': `Bearer ${apiKey}`,
-                'cal-api-version': '2024-09-04',
-            },
-        });
+        // Busca disponibilidade via Cal.com API
+        let availability = [];
+        try {
+            const res = await fetch(`https://api.cal.com/v2/slots?${params}`, {
+                headers: {
+                    'Authorization': `Bearer ${apiKey}`,
+                    'cal-api-version': '2024-09-04',
+                },
+            });
+            if (!res.ok) {
+                return ctx.badRequest('Erro ao buscar slots no Cal.com');
+            }
+            const data = await res.json();
+            availability = data.data; // slots do Cal.com
+        } catch (e) {
+            return ctx.badRequest('Erro ao buscar disponibilidade externa');
+        }
 
-        if (!res.ok) return ctx.badRequest('Erro ao buscar slots no Cal.com');
-        const data = await res.json();
-        ctx.body = data.data;
+        // Retorna todos os dados da companion + disponibilidade
+        ctx.body = {
+            ...companion,
+            availability_slots: availability
+        };
     },
 
+    // POST /companions/:id/cancel-booking
     async cancelBooking(ctx) {
-        const { id } = ctx.params; // id do companion (ou booking, se preferir)
+        const { id } = ctx.params; // id do companion
         const { bookingUid, seatUid, cancellationReason } = ctx.request.body;
 
-        // Buscar os dados do companion para pegar o event_type_id e cal_api_key se precisar
+        // Busca companion
         const companion = await strapi.entityService.findOne('api::companion.companion', id);
 
         if (!companion) {
             return ctx.badRequest('Companion not found');
         }
 
-        // Prepare headers
         const calApiKey = companion.cal_api_key;
         if (!calApiKey) {
             return ctx.badRequest('cal_api_key not configured for this companion');
@@ -68,16 +94,13 @@ export default factories.createCoreController('api::companion.companion', ({ str
             'Content-Type': 'application/json',
         };
 
-        // Body
+        // Monta body do cancelamento
         let body: any = {};
-
         if (seatUid) {
-            // Cancelar um assento específico (attendee)
-            body.seatUid = seatUid;
+            body.seatUid = seatUid; // attendee específico
         }
         if (cancellationReason) {
-            // Cancelar como host (todos os assentos)
-            body.cancellationReason = cancellationReason;
+            body.cancellationReason = cancellationReason; // todos
         }
 
         try {
